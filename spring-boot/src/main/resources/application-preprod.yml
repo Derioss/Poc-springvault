@@ -1,0 +1,7 @@
+spring:
+  config:
+    import: vault://kv/poc-spring/preprod
+    activate:
+      on-profile: "preprod"
+  datasource:
+    content: ${content}

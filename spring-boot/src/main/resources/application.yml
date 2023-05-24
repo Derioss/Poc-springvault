@@ -1,0 +1,24 @@
+spring:
+  cloud:
+    vault:
+      host: localhost
+      port: 8200
+      scheme: http
+      uri: http://localhost:8200
+      connection-timeout: 5000
+      read-timeout: 15000
+      authentication: APPROLE
+      app-role:
+        role-id: 228a91ac-c997-fd53-f56f-5cb95bc01a4b
+        secret-id: 4f828925-f2cc-ceb7-fd5d-05975ea399b8
+        role: poc-spring
+        app-role-path: approle
+      kv:
+        enabled: true
+        application-name: poc-spring
+      generic:
+        enabled: false
+    config:
+      spring.config.import: vault://kv/poc-spring/
+  datasource:
+    content: ${content}

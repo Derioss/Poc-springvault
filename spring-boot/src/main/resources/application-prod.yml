@@ -1,0 +1,7 @@
+spring:
+  config:
+    import: vault://kv/poc-spring/prod
+    activate:
+      on-profile: "prod"
+  datasource:
+    content: ${content}
