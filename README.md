@@ -2,6 +2,8 @@
 
 test with https://shanbhagsudharshan.medium.com/integrate-hashicorp-vault-with-spring-config-server-30993baa55b0
 
+https://www.hashicorp.com/blog/authenticating-applications-with-vault-approl
+
 ```bash
 # start vault
 docker run -p 8200:8200  --name vault --cap-add=IPC_LOCK \
@@ -77,3 +79,5 @@ run spring
 ```
 mvn spring-boot:run  -Dspring-boot.run.profiles=dev
 ```
+## Les types d'authentification et lurs avantages|default
+
